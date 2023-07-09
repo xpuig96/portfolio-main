@@ -1,6 +1,7 @@
 import React from 'react';
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import profileImage from '../assets/logo1.jpg';
+import {Link} from 'react-scroll';
 
 const Home = () => {
   return (
@@ -16,12 +17,15 @@ const Home = () => {
             <h1 className='text-3xl sm:text-2xl font-bold text-[#ccd6f6]'>Xavi Puig Navarro</h1>
             <h2 className='text-1xl sm:text-2xl font-bold text-[#8892b0]'>Desarrollador Web</h2>
             <div className='py-3 max-w'>
+              <Link to="work" smooth={true} offset={50} duration={500}>
                 <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-red-400 hover:border-red-400'>
                     Ver Portfolio 
                     <span className='group-hover:rotate-90 duration-300'>
                     <HiArrowNarrowRight className='ml-2'/>
                     </span>
                 </button>
+              </Link>
+                
             </div>
           </div>
         </div>
