@@ -6,7 +6,7 @@ import esCt from './translations/es-ct';
 export const TranslationContext = createContext();
 
 export const TranslationProvider = ({ children }) => {
-  const [language, setLanguage] = useState('en');
+  const [language, setLanguage] = useState('es');
 
   const handleLanguageChange = (language) => {
     setLanguage(language);
