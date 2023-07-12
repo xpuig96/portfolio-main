@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from "react";
+import { TranslationContext } from './TranslationContext';
 
 import HTML from '../assets/html.png'
 import CSS from '../assets/css.png'
@@ -14,12 +15,15 @@ import VegasPro from '../assets/vegaspro.png'
 import Photoshop from '../assets/photoshop.png'
 
 const Skills = () => {
+
+    const { language, handleLanguageChange, t } = useContext(TranslationContext);
+
   return (
     <div name='skills' className='w-full md:h-screen bg-[#0a192f]  text-gray-300 flex justify-center items-center p-14'>
         <div className='max-w-[1000px] mx-auto p-4 flex-col  w-full h-full'>
             <div className='mt-20'>
-                <p className='text-3xl font-bold inline border-b-4 border-red-400'>Experiencia</p>
-                <p className='py-4'>//Estas son las tecnologias con las que he trabajado:</p>
+                <p className='text-3xl font-bold inline border-b-4 border-red-400'>{t.skills}</p>
+                <p className='py-4'>{t.descriptionSkills}</p>
             </div>
 
             <div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8'>

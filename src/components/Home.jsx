@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useContext } from "react";
+import { TranslationContext } from './TranslationContext';
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import profileImage from '../assets/logo1.jpg';
 import {Link} from 'react-scroll';
 
 const Home = () => {
+  
+  const { language, handleLanguageChange, t } = useContext(TranslationContext);
+
   return (
     <div name='home' className='w-full h-screen bg-[#0a192f]'>
       {/* Container */}
@@ -13,13 +17,13 @@ const Home = () => {
             <img src={profileImage} alt='Profile Image' className='flex rounded-full w-90 h-70'/>
           </div>
           <div className='justify-center md:text-left text-justify mr-10'>
-            <p className='text-red-400'>Hola, mi nombre es</p>
-            <h1 className='text-3xl sm:text-2xl font-bold text-[#ccd6f6]'>Xavi Puig Navarro</h1>
-            <h2 className='text-1xl sm:text-2xl font-bold text-[#8892b0]'>Desarrollador Web</h2>
+            <p className='text-red-400'>{t.hellohome}</p>
+            <h1 className='text-3xl sm:text-2xl font-bold text-[#ccd6f6]'>{t.name}</h1>
+            <h2 className='text-1xl sm:text-2xl font-bold text-[#8892b0]'>{t.dev}</h2>
             <div className='py-3 max-w'>
               <Link to="work" smooth={true} offset={50} duration={500}>
                 <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-red-400 hover:border-red-400'>
-                    Ver Portfolio 
+                    {t.lookPor} 
                     <span className='group-hover:rotate-90 duration-300'>
                     <HiArrowNarrowRight className='ml-2'/>
                     </span>
