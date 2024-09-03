@@ -1,9 +1,10 @@
 import React, { useState, useContext } from 'react';
-import { FaBars, FaTimes, FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa';
+import { FaBars, FaTimes, FaGithub, FaLinkedin, FaAddressCard } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 import { Link } from 'react-scroll';
 import { TranslationContext } from './TranslationContext';
+import CV from '../assets/CVXavi2024.pdf';
 
 export const LanguageContext = React.createContext();
 
@@ -83,7 +84,7 @@ const Navbar = () => {
       <div className="hidden lg:flex fixed flex-col top-[35%] left-0" style={{ fontWeight: 'bold' }}>
         <ul>
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[0px] duration-300 bg-blue-700">
-            <a className="flex justify-between items-center w-full text-gray-300" href="https://www.linkedin.com/in/xavi-puig-9b7470206/" target="_blank">
+            <a className="flex justify-between items-center w-full text-gray-300" href="https://www.linkedin.com/in/xavi-p-n-9b7470206/" target="_blank">
               Linkedin <FaLinkedin size={30} />
             </a>
           </li>
@@ -95,6 +96,11 @@ const Navbar = () => {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[0px] duration-300 bg-red-700">
             <a className="flex justify-between items-center w-full text-gray-300" href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKjsgNHglTWtsZkNHXjfMwNhXsfrJrZJJhJHhQfPllCzVhcmFscvRzTQQLZkcbTJvWfrCpl" target="_blank">
               Email <HiOutlineMail size={30} />
+            </a>
+          </li>
+          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[0px] duration-300 bg-green-700">
+            <a className="flex justify-between items-center w-full text-gray-300" href={CV} download="CVXavi2024.pdf">
+              CV <FaAddressCard size={30} />
             </a>
           </li>
         </ul>

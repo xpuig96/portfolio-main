@@ -8,7 +8,7 @@ const aboutTranslations = {
 
 const contactTranslations = {
   contact: 'Contact',
-  descriptioncontact: '//Submit the form below or email me - xpuiig14@gmail.com',
+  descriptioncontact: '//Submit the form below or email me on - xpuiig14@gmail.com',
   sendEmail: 'Send Email',
   contactInfo: 'Contact Information:',
   phone: 'Phone:',
